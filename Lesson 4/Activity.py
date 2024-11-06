@@ -15,5 +15,8 @@ print (average)
 English = int(input ("enter english marks "))
 Maths = int(input("enter math marks "))
 Total = English + Maths
+print (Total / 2)
+print (Total / 200 * 100)
+
 
 
