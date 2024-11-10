@@ -1,2 +1,7 @@
 import keyword
-print (keyword.kwlist)
+#print (keyword.kwlist)
+
+a = "happy"
+print (len (a))
+
+
