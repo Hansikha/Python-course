@@ -20,3 +20,4 @@ if b in a :
 elif c not in a :
     print (c," is not present in ",a )
 
+
