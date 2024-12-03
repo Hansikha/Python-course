@@ -1,5 +1,3 @@
-input ("enter a character" ) 
-if "character">="a" and "character"<="z" :
-    print ("This character is in the alphabet")
-else :
-    print ("This character is not in the alphabet")
+character1 = (input ("Please enter the character you want to find out that is in the alphabet or not ")) 
+alaphabet = character1.isalpha()
+print(alaphabet)
