@@ -1,5 +1,5 @@
 #binary conversion
-numb = float(input (" please enter a number : " ))
+numb = int(input (" please enter a number : " ))
 s = ""
 
 while (numb>0) : 
