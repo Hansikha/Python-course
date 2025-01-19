@@ -5,9 +5,14 @@ try:
     else:
         if a % 2 == 0:
             print("This number is an even number: ")
-        else:
+        else:            
             print("This number is an odd number: ")
+except ValueError:
+    print ("We only accept numbers")
 finally:
     print("The end")
+
+
+
 
     
