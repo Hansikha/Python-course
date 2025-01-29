@@ -1,6 +1,15 @@
-Tup1 =(2, 3, 4, 5, 6, 7)
-Mul = [(a * b) Tup1]
-print("The orignal list was: ",Tup1)
-print("The new list is ",Mul)
+def multiplying_tuple_number(numb_tuple):
+    product = 1
+    for numb in numb_tuple:
+        product *= numb
+        return product
+    Tup1 = (1, 2, 3)
+    result = multiplying_tuple_number(Tup1)
+    print("The product of all numbers are",result)
+
+
+
+
+
 
 
