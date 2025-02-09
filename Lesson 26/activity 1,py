@@ -1,0 +1,88 @@
+Board_Name = {"1": " ","2": " ","3": " ","4": " ","5": " ","6": " ","7": " ","8": " ","9": " "}
+Board_keys = []
+for key in Board_Name:
+    Board_keys.append(key)
+def print_board(b):
+    print(b["1"]+"|"+b["2"]+"|"+ b["3"])
+    print("-+-+-+")
+    print(b["4"]+"|"+b["5"]+"|"+ b["6"])
+    print("-+-+-+")
+    print(b["7"]+"|"+b["8"]+"|"+ b["9"])
+def game ():
+    turn = "X"
+    count = 0
+    for i in range(10):
+        print_board(Board_Name)
+        print("Its your turn "+ turn + " Move to which place?")
+        move = input()
+        if Board_Name [move]==" ":
+            Board_Name [move]= turn 
+            count = count+1
+        else:
+            print("This place has already been filled.Which place to you want to move to??")
+            continue 
+        if count >= 5:
+            if Board_Name["1"]==Board_Name["2"]==Board_Name["3"] != " ":
+                print_board (Board_Name)
+                print("GAME OVER!!")
+                print("*** "+turn+" WON!! ***")
+                break
+            elif Board_Name["4"]==Board_Name["5"]==Board_Name["6"] != " ":
+                print_board (Board_Name)
+                print("GAME OVER!!")
+                print("*** "+turn+" WON!! ***")
+                break
+            elif Board_Name["7"]==Board_Name["8"]==Board_Name["9"] != " ":
+                print_board (Board_Name)
+                print("GAME OVER!!")
+                print("*** "+turn+" WON!! ***")
+                break
+            elif Board_Name["7"]==Board_Name["4"]==Board_Name["1"] != " ":
+                print_board (Board_Name)
+                print("GAME OVER!!")
+                print("*** "+turn+" WON!! ***")
+                break
+            elif Board_Name["8"]==Board_Name["5"]==Board_Name["2"] != " ":
+                print_board (Board_Name)
+                print("GAME OVER!!")
+                print("*** "+turn+" WON!! ***")
+                break
+            elif Board_Name["9"]==Board_Name["6"]==Board_Name["3"] != " ":
+                print_board (Board_Name)
+                print("GAME OVER!!")
+                print("*** "+turn+" WON!! ***")
+                break
+            elif Board_Name["1"]==Board_Name["5"]==Board_Name["9"] != " ":
+                print_board (Board_Name)
+                print("GAME OVER!!")
+                print("*** "+turn+" WON!! ***")
+                break
+            elif Board_Name["7"]==Board_Name["5"]==Board_Name["3"] != " ":
+                print_board (Board_Name)
+                print("GAME OVER!!")
+                print("*** "+turn+" WON!! ***")
+                break
+        if count == 9:
+            print("GAME OVER!!")
+            print("ITS A TIE!!")
+
+        if turn == "X":
+            turn == "O"
+        else:
+            turn = "X"
+    restart = input("Do you wanna play again??(Yes/No)")
+    if restart == "yes" or restart == "Yes":
+        for key in Board_keys:
+            Board_Name[key] = " "
+
+        game()
+
+if __name__== "__main__":
+    game()
+
+
+
+
+
+
+
