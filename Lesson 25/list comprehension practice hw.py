@@ -1,6 +1,12 @@
-a = int(input("Please write the amount of odd number of want to find up to the value you enter: "))
+import random
+import string
 
+password = input ("Hi! Would you like a random password generated??: Yes/No: ")
 
+if password == "No":
+    exit()
+elif password == "Yes":
+    print ("Ok! Lets begin to generate a random password for you!!")
 
 
 
