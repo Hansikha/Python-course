@@ -9,6 +9,7 @@ class sample:
 
     def hello (self):
         print("The value of the variable is ",self.__privateVar)
+        ###
 
 obj = sample()
 #obj.__privMeth()
