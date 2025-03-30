@@ -1,4 +1,4 @@
-# 1, Take a number from the user, create a list with all the odd numbers uner the input value and another list of odd numbers.
+#1 Take a number from the user, create a list with all the odd numbers uner the input value and another list of odd numbers.
 #2 create a list of fruits. Then, convert the first letter of every elemetn to capital and create a new list of updated values
 
 number = int(input("enter a number: "))
