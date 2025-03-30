@@ -11,10 +11,3 @@ fruits =["apple", "banana","mango", "grapes"]
 updated_fruits = [fruit.capitalize()
                  for fruit in fruits]
 print("updated fruits list: ", updated_fruits)
-
-
-
-
-
-
-
