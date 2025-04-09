@@ -1,2 +1,18 @@
-class vehicle:
-    
+class vechicle:
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ class bus(vechicle):
