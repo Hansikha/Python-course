@@ -24,4 +24,4 @@ for car in (obj_BMW, obj_ferrari):
         
 #printing
 print(obj_BMW.fuel_type)
-print(obj_ferrari)
+print(obj_ferrari.fuel_type)
