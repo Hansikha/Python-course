@@ -1,0 +1,38 @@
+from tkinter import*
+from tkinter.filedialog import askopenfile, asksaveasfile, asksaveasfilename
+root = Tk()
+root.title("Text Editor")
+root.geometry("800x800")
+root.rowconfigure(0, minsize=800, weight=1)
+root.columnconfigure(1, minsize=800, weight=1)
+def open_file():
+  
+  file_path = askopenfile(filetypes = [("text files", "*.txt"),("all files", "*.*")])
+  if not file_path:
+    return
+  t1.delete(1, END)
+  with open(file_path,"r") as ifile:
+    text = t1.read()
+    t1.insert(END, text)
+    ifile.close()
+  root.title(f"Text Editor - {file_path}")
+  
+def save_file():
+  file_path = asksaveasfilename(defaultextension = "txt", filetypes = [("text files", "*.txt"),("all files", "*.*")])
+  if not file_path:
+    return
+  with open(file_path, "w") as output_file:
+    text = t1.get(1.0, END)
+    output_file.write(text)
+  root.title(f"Hansikha's Text Editor - {file_path}")
+  
+t1 = Text(root)
+f1 = Frame(root, relief = RAISED, bd = 3)
+b1 = Button(f1, text = "Open", command = open_file)
+b2 = Button(f1, text = "Save As", command = save_file)
+b1.grid(row = 0, column = 0, sticky = "ew", padx = 5, pady = 5)
+b2.grid(row = 1, column= 0, sticky = "ew", padx = 5, pady = 5)
+f1.grid(row = 0, column = 0, sticky = "ns")
+t1.grid(row = 0, column = 1,sticky = "nsew")
+
+root.mainloop()
